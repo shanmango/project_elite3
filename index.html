@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ELITE 3 Project - PokeStats</title>
+        <link rel='stylesheet' href='css/style.css'>
+        <script src="https://kit.fontawesome.com/7e46f5dc38.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class='bigRow'>
+            <div class='margin'></div>
+            <div class='pokestats-container'>
+                <!-- Dropdowns and sliders -->
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class='project-title'>PokeStats: Pokemon Trainer Guide</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <label for='stat1-select'>Stat 1: </label>
+                        <select id='stat1-select' name='stat1-select'>
+                            <option>HP</option>
+                            <option>Attack</option>
+                            <option>Defense</option>
+                            <option>Sp. Atk</option>
+                            <option>Sp. Def</option>
+                            <option>Speed</option>
+                        </select>
+                    </div>
+                    <div class='col'>
+                        <label for='stat2-select'>Stat 2: </label>
+                        <select id='stat2-select' name='stat2-select'>
+                            <option>Speed</option>
+                            <option>Sp. Def</option>
+                            <option>Sp. Atk</option>
+                            <option>Defense</option>
+                            <option>Attack</option>
+                            <option>HP</option>
+                        </select>
+                    </div>
+                    <div class='col'>
+                        <label for='generation-slider'>Generation </label>
+                        <input type='range' id='generation-slider' name='generation-slider' value='1' min='1' max='5' step='1'>
+                        <span id='generation-selection'>1</span>
+                        <button id='play-button'>Play</button>
+                    </div> 
+                </div>
+
+                <!-- First row of charts -->
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class='chart-title scatterplot'>HP vs. Speed</h2>
+                        <p>This scatterplot compares Pokemon from the currently selected generation based on the currently selected stats.</p>
+                        <p>Choose which stats to compare and which generation to view using the dropdowns and slider above.</p>
+                        <p>Hovering over a Pokemon will highlight other Pokemon with the same primary or secondary type.</p>
+                        <p>Left click to select a Pokemon, view its stats in the radial chart, and follow it as you view different stats.</p>
+                        <p>Right click to add a Pokemon to a team in the Pokemon Stadium.</p>
+                        <svg id='scatterplot'></svg>
+                    </div>
+                    <div class='col'>
+                        <h2 class='chart-title barchart'>Number of Pokemon by Type</h2>
+                        <p>This bar chart shows the distribution of Pokemon across types for the selected generation.</p>
+                        <p>Hovering a bar will highlight all Pokemon with the hovered type in the scatterplot.</p>
+                        <svg id='barchart'></svg>
+                        <h2 class='chart-title radialchart'>Average Generation 1 Pokemon's Stats</h2>
+                        <p>This radial chart breaks down the stats of the currently selected Pokemon.</p>
+                        <p>Select a Pokemon by clicking it in the scatterplot or its image in the Pokemon Stadium.</p>
+                        <svg id='radialchart'></svg>
+                    </div>
+                </div>
+
+                <!-- Second row of charts -->
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class='chart-title innovative'>Pokemon Stadium</h2>
+                        <p>Create your own Pokemon teams and see how they match up against your opponents' teams. Add Pokemon to either team using the dropdown and buttons below or by using the context menu in the scatterplot by right clicking a Pokemon.</p>
+                        <p>Each line between two Pokemon indicates that the Pokemon on your side is a good matchup against the Pokemon on the opponent's side.</p>
+                        <p>Left click a Pokemon's image to select it and its generation.</p>
+                        <!-- Dropdown -->
+                        <div class='bigRow pokemon-stadium-select'>
+                            <div class='margin'></div>
+                            <div class='col'>
+                                <label for='pokemon-select'>Pokemon: </label>
+                                <select id='pokemon-select' name='pokemon-select'></select>
+                            </div>
+                            <div class='col'>
+                                <label for='pokemon-add-button'>Add to: </label>
+                                <button id='pokemon-add-button-1'>Your Team</button>
+                                <button id='pokemon-add-button-2'>Opponent Team</button>
+                            </div> 
+                            <div class='margin'></div>
+                        </div>
+                        <svg id='innovative'></svg>
+                    </div>
+                </div>
+            </div>
+            <div class='margin'></div>
+        </div>
+        <!-- Imports -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://d3js.org/d3.v5.min.js'></script>
+        <script src='js/sprites.js'></script>
+        <script src='js/name-formatter.js'></script>
+        <script src='js/scatterplot.js'></script>
+        <script src='js/barchart.js'></script>
+        <script src='js/radialchart.js'></script>
+        <script src='js/innovative.js'></script>
+        <script src='js/contextmenu.js'></script>
+        <script src='js/tooltip.js'></script>
+        <script src='js/proj.js'></script>
+    </body>
+</html>

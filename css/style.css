@@ -1,0 +1,201 @@
+/* Layout */
+
+html {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin: 0px;
+}
+
+p {
+  font-size: 0.625em;
+  margin: 0;
+  text-align: center;
+}
+
+.bigRow {
+    display: flex;
+}
+
+.margin {
+    flex: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.col {
+  margin-right: 30px;
+}
+
+select {
+  text-transform: capitalize;
+}
+
+svg#scatterplot {
+}
+
+svg#scatterplot circle {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+svg#scatterplot circle.selected-pokemon {
+  stroke: black;
+  stroke-width: 1.5;
+  opacity: 1;
+}
+
+svg#scatterplot circle.hovered-type2 {
+  stroke: black;
+  stroke-width: 1.5;
+  opacity: 1;
+}
+
+svg#scatterplot circle.hovered-type {
+  stroke: black;
+  stroke-width: 1.5;
+  opacity: 1;
+}
+
+svg#barchart {
+}
+
+svg#barchart rect.hovered-type, svg#barchart rect.hovered-type2 {
+  stroke: black;
+  stroke-width: 1.5;
+}
+
+svg#radialchart {
+  overflow: visible;
+}
+
+svg#radialchart path.radial-outline {
+  stroke-width: 5;
+  fill-opacity: 0.5;
+}
+
+svg#radialchart g.tick line {
+  opacity: 0.3;
+}
+
+g.tick line {
+  opacity: 0.1;
+}
+
+.axis-label {
+  font-size: 14px;
+}
+
+.project-title {
+  text-align: center;
+  width: 1200px;
+}
+
+.chart-title {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.pokestats-tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75em;
+  color: rgb(100, 100, 100);
+  padding: 3px;
+}
+
+.context-menu {
+  position:absolute;
+  background-color: white;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+}
+
+.context-menu .context-menu-item {
+  font-size: 0.625em;
+  cursor: pointer;
+}
+
+.team-pokemon-button {
+  cursor: pointer;
+}
+
+.context-menu .context-menu-item:hover {
+  background-color: rgba(120, 120, 120, 0.1);
+}
+
+.pokemon-stadium-select {
+  margin-top: 5px;
+}
+
+svg#innovative rect.team-1-side {
+  fill: rgba(127, 255, 255, 0.5);
+}
+
+svg#innovative rect.team-2-side {
+  fill: rgba(255, 127, 129, 0.5);
+}
+
+svg#innovative .sprite-background {
+  cursor: pointer;
+}
+
+svg#innovative .team-pokemon-sprite {
+  cursor: pointer;
+}
+
+svg#innovative text.pokemon-name {
+  font-size: 0.8em;
+  text-shadow: 0px 0px 2px white;
+  user-select: none;
+  fill: black;
+}
+
+svg#innovative rect.pokemon-container {
+  opacity: 75%;
+}
+
+svg#innovative .stadium-selected-pokemon rect.pokemon-container {
+  opacity: 100%;
+  stroke: black;
+  stroke-width: 1.5;
+}
+
+svg#innovative .hovered-pokemon rect.pokemon-container {
+  opacity: 100%;
+}
+
+svg#innovative image.pokemon-stadium-bg {
+  opacity: 60%;
+}
+
+svg#innovative path.pokemon-match.hovered-match {
+  stroke-width: 5;
+}
+
+svg#innovative .move-up-button {
+  fill: rgb(50,50,50);
+}
+
+svg#innovative .move-up-button:hover {
+  stroke: white;
+  stroke-width: 2.5;
+}
+
+svg#innovative .move-down-button {
+  fill: rgb(50,50,50);
+}
+
+svg#innovative .move-down-button:hover {
+  stroke: white;
+  stroke-width: 2.5;
+}
+
+svg#innovative .delete-button {
+  fill: rgb(50,50,50);
+}
+
+svg#innovative .delete-button:hover {
+  stroke: white;
+  stroke-width: 2.5;
+}
